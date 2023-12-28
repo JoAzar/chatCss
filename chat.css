@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    /*filter: blur(100px);*/
+    transition: filter 0.5s ease-in-out;
+    background-color: #000;
+    
+}
+
+.body:hover{
+    filter: blur(0px);
+}
+
+.sec {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.cajaCentralTexto {
+    color: white;
+    position: absolute;
+    z-index: 2;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 25vw;
+    bottom: 10vh;
+    font-size: 2vh;
+    background-color: #000000e0;
+    border: 2px solid rgba(243, 150, 64, 0.774);
+}
+
+.chatCodificado{
+    color: white;
+    position: absolute;
+    z-index: 2;
+    width: 20vw;
+    height: 26vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 51vw;
+    bottom: 10vh;
+    font-size: 2vh;
+    background-color: #000000e0;
+    border: 2px solid rgba(243, 150, 64, 0.774);
+    font-family: 'Ysabeau Office', sans-serif;
+    border-radius: 10%;
+    padding: 2vh;
+}
+
+input:valid ~ .chatCodificado,
+input:focus ~ .chatCodificado{
+    border: 2px solid rgba(236, 61, 61, 0.774);
+}
+
+.chatCodificadoSubmit{
+    color: white;
+    position: absolute;
+    z-index: 2;
+    width: 5vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: 51vw;
+    bottom: 10vh;
+    font-size: 2vh;
+    background-color: #000000e0;
+    border: 2px solid rgba(243, 150, 64, 0.774);
+    font-family: 'Belanosima', sans-serif;
+    cursor: pointer;
+}
+
+.sec .box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: rgb(19, 19, 19);
+    z-index: -1;
+}
+
+.animate {
+   animation: animate 2s linear forwards; 
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        background-color: transparent;
+        border-radius: 40px;
+    }
+    50%
+    {
+        background-color: rgb(255, 115, 0);
+        border-radius: 10px;
+    }
+    100%
+    {
+        background-color: rgb(230, 230, 230);
+        border-radius: 5px;
+    }
+}
+
+.bienvChat {
+    color: orange;
+    text-shadow: 1px 2px 5px orangered;
+    position: relative;
+}
+
+.volverAtras:hover  {
+    border: 1px solid rgb(255, 115, 0);
+}
+
+.volverAtras {
+    color: rgb(255, 255, 255);
+    font-size: 3vh;
+    font-family: 'Belanosima', sans-serif;
+    text-shadow: 1px 2px 5px rgb(233, 233, 233);
+    width: 50%;
+    font-weight: lighter;
+    background-color: #1a1a1ae3;
+    text-align: center;
+    border-radius: 12px 12px 12px 12px;
+    border: 1.3px solid rgb(255, 255, 255);
+    margin-bottom: 3vh;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cajaChicaMenu {
+    text-decoration: none;
+    background-color: rgba(36, 36, 36, 0.582);
+    color: rgb(235, 235, 235);
+    text-shadow: 1px 2px 5px white;
+    font-size: 5vh;
+    font-family: 'Belanosima', sans-serif;
+    padding-right: 3vh;
+    padding-left: 3vh;
+}
+
+.cajaChicaMenu:hover {
+    color:rgb(255, 115, 0);
+    text-shadow: 1px 2px 5px black;
+}
+
+.cajaGrandeMenu {
+    border: solid 2px rgba(207, 207, 207, 0);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: rgba(31, 31, 31, 0.507);
+    text-shadow: 1px 2px 5px white;
+    font-size: 6vh;
+    border-radius: 5px;
+    position: relative;
+}
+
+.cajaGrandeMenu:hover {
+    border: solid 2px rgb(255, 115, 0);
+}
+
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-size: 5vh;
+    font-family: 'Belanosima', sans-serif;
+    text-shadow: 1px 2px 5px rgb(233, 233, 233);
+    width: 70%;
+    font-weight: lighter;
+    background-color: #1a1a1ae3;
+    text-align: center;
+    margin-bottom: 5vh;
+    border-radius: 12px 12px 12px 12px;
+    border: 1.3px solid rgb(255, 255, 255);
+}
